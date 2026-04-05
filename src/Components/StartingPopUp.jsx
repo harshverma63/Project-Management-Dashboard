@@ -18,7 +18,7 @@ export const StartingPopUp = ({setStartingPopUp}) => {
 
                 <div class="startingPopUpContainer">
                     <h3>Welcome, Please Check the below readme file for credentials, thankyou!</h3>
-                    <a class="maps-link" href="https://raw.githubusercontent.com/harshverma63/emp-hr-dashboard-react/refs/heads/main/README.md" target="_blank">Read Me</a>
+                    <a class="maps-link" href="https://raw.githubusercontent.com/harshverma63/Project-Management-Dashboard/refs/heads/main/README.md" target="_blank">Read Me</a>
                 </div>
             </div>
         </div>
