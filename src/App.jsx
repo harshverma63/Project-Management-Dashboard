@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import './App.css'
-import {UsersData} from './Components/UsersData'
+// import './App.css'
+import { Projects } from './Components/Project'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div className='mainCards'>
-      <UsersData/>
+      <Projects/>
       </div>
     </>
   )

@@ -1,0 +1,753 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "project": "Office Task Management System",
+    "created": "2026-03-28",
+    "employeesAPI": "https://raw.githubusercontent.com/harshverma63/APIs/refs/heads/main/Employees/employees4.json",
+    "statuses": [
+      "active",
+      "under production",
+      "QA",
+      "delivered",
+      "canceled"
+    ],
+    "priorities": [
+      "low",
+      "medium",
+      "high",
+      "critical"
+    ],
+    "nonEditableFields": [
+      "id",
+      "subject",
+      "description",
+      "arrivalTime"
+    ],
+    "editableFields": [
+      "dueDate",
+      "requiredHours",
+      "assignedTo",
+      "status",
+      "priority",
+      "progress",
+      "tags",
+      "comments"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "subject": "Q2 Budget Report Preparation",
+      "description": "Compile and analyze departmental expenditures for Q2. Cross-reference with projected budgets and highlight variances above 10%. Submit to the finance team for review.",
+      "arrivalTime": "2026-03-01T09:00:00Z",
+      "dueDate": "2026-04-05T17:00:00Z",
+      "requiredHours": 12,
+      "assignedTo": {
+        "id": 4,
+        "name": "Patricia Lebsack",
+        "employeeId": "EMP0004",
+        "designation": "Chief Financial Officer",
+        "department": "Finance",
+        "image": "https://mockmind-api.uifaces.co/content/human/103.jpg"
+      },
+      "status": "under production",
+      "priority": "high",
+      "progress": 45,
+      "tags": [
+        "finance",
+        "reporting"
+      ],
+      "comments": [
+        {
+          "author": "Patricia Lebsack",
+          "text": "Started compiling data from all departments.",
+          "timestamp": "2026-03-10T10:30:00Z"
+        }
+      ],
+      "dueDateDate": "05-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-002",
+      "subject": "New Employee Onboarding Documentation",
+      "description": "Create a comprehensive onboarding pack for the three new developers joining in April. Includes IT setup guide, HR policies, team structure overview, and tool access instructions.",
+      "arrivalTime": "2026-03-03T10:00:00Z",
+      "dueDate": "2026-03-28T17:00:00Z",
+      "requiredHours": 8,
+      "assignedTo": {
+        "id": 10,
+        "name": "Clementina DuBuque",
+        "employeeId": "EMP0010",
+        "designation": "VP of HR",
+        "department": "HR",
+        "image": "https://mockmind-api.uifaces.co/content/human/106.jpg"
+      },
+      "status": "QA",
+      "priority": "high",
+      "progress": 90,
+      "tags": [
+        "HR",
+        "documentation"
+      ],
+      "comments": [
+        {
+          "author": "Clementina DuBuque",
+          "text": "Draft sent to HR for review.",
+          "timestamp": "2026-03-20T14:00:00Z"
+        }
+      ],
+      "dueDateDate": "28-Mar-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-003",
+      "subject": "Client Portal UI Redesign",
+      "description": "Redesign the client-facing portal based on the new brand guidelines received in February. Focus on dashboard layout, color scheme updates, and mobile responsiveness.",
+      "arrivalTime": "2026-03-05T09:30:00Z",
+      "dueDate": "2026-04-20T17:00:00Z",
+      "requiredHours": 40,
+      "assignedTo": {
+        "id": 9,
+        "name": "Glenna Reichert",
+        "employeeId": "EMP0009",
+        "designation": "VP of Design",
+        "department": "Design",
+        "image": "https://mockmind-api.uifaces.co/content/human/105.jpg"
+      },
+      "status": "under production",
+      "priority": "critical",
+      "progress": 30,
+      "tags": [
+        "design",
+        "frontend"
+      ],
+      "comments": [],
+      "dueDateDate": "20-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-004",
+      "subject": "Weekly Team Sync Agenda \u2014 April",
+      "description": "Prepare and distribute recurring weekly sync agendas for the month of April. Coordinate with team leads to gather agenda points by each Thursday EOD.",
+      "arrivalTime": "2026-03-07T08:00:00Z",
+      "dueDate": "2026-04-30T10:00:00Z",
+      "requiredHours": 4,
+      "assignedTo": {
+        "id": 5,
+        "name": "Chelsey Dietrich",
+        "employeeId": "EMP0005",
+        "designation": "Chief Operating Officer",
+        "department": "Operations",
+        "image": "https://mockmind-api.uifaces.co/content/human/104.jpg"
+      },
+      "status": "active",
+      "priority": "low",
+      "progress": 0,
+      "tags": [
+        "admin",
+        "meetings"
+      ],
+      "comments": [],
+      "dueDateDate": "30-Apr-2026",
+      "dueDateTime": "10:00 AM"
+    },
+    {
+      "id": "TASK-005",
+      "subject": "API Integration with Payment Gateway",
+      "description": "Integrate Stripe payment gateway into the checkout flow. Handle webhook events for payment success, failure, and refunds. Ensure PCI-DSS compliance throughout.",
+      "arrivalTime": "2026-03-08T11:00:00Z",
+      "dueDate": "2026-04-10T17:00:00Z",
+      "requiredHours": 28,
+      "assignedTo": {
+        "id": 6,
+        "name": "Dennis Schulist",
+        "employeeId": "EMP0006",
+        "designation": "VP of Engineering",
+        "department": "Engineering",
+        "image": "https://mockmind-api.uifaces.co/content/human/6.jpg"
+      },
+      "status": "under production",
+      "priority": "critical",
+      "progress": 55,
+      "tags": [
+        "backend",
+        "integration",
+        "payments"
+      ],
+      "comments": [
+        {
+          "author": "Dennis Schulist",
+          "text": "Webhook handlers implemented. Testing in sandbox.",
+          "timestamp": "2026-03-22T16:00:00Z"
+        }
+      ],
+      "dueDateDate": "10-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-006",
+      "subject": "Social Media Content Calendar \u2014 April",
+      "description": "Plan and schedule social media posts for all company channels (LinkedIn, Twitter, Instagram) for the month of April. Align posts with the upcoming product launch.",
+      "arrivalTime": "2026-03-10T09:00:00Z",
+      "dueDate": "2026-03-31T17:00:00Z",
+      "requiredHours": 10,
+      "assignedTo": {
+        "id": 12,
+        "name": "Sophia Martinez",
+        "employeeId": "EMP0012",
+        "designation": "Director of Marketing",
+        "department": "Marketing",
+        "image": "https://mockmind-api.uifaces.co/content/human/107.jpg"
+      },
+      "status": "delivered",
+      "priority": "medium",
+      "progress": 100,
+      "tags": [
+        "marketing",
+        "social media"
+      ],
+      "comments": [
+        {
+          "author": "Sophia Martinez",
+          "text": "All posts scheduled on Buffer.",
+          "timestamp": "2026-03-28T09:00:00Z"
+        }
+      ],
+      "dueDateDate": "31-Mar-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-007",
+      "subject": "Server Infrastructure Cost Audit",
+      "description": "Review current cloud infrastructure spending on AWS. Identify unused or over-provisioned resources and recommend cost-saving measures. Target: 15% cost reduction.",
+      "arrivalTime": "2026-03-10T10:00:00Z",
+      "dueDate": "2026-04-08T17:00:00Z",
+      "requiredHours": 16,
+      "assignedTo": {
+        "id": 2,
+        "name": "Ervin Howell",
+        "employeeId": "EMP0002",
+        "designation": "Chief Technology Officer",
+        "department": "Engineering",
+        "image": "https://mockmind-api.uifaces.co/content/human/2.jpg"
+      },
+      "status": "active",
+      "priority": "high",
+      "progress": 10,
+      "tags": [
+        "DevOps",
+        "finance",
+        "cloud"
+      ],
+      "comments": [],
+      "dueDateDate": "08-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-008",
+      "subject": "Product Demo Video Script",
+      "description": "Write the narration script for the 3-minute product demo video to be used at the April trade show. Coordinate with the product team for feature accuracy.",
+      "arrivalTime": "2026-03-11T09:00:00Z",
+      "dueDate": "2026-04-01T17:00:00Z",
+      "requiredHours": 6,
+      "assignedTo": {
+        "id": 3,
+        "name": "Clementine Bauch",
+        "employeeId": "EMP0003",
+        "designation": "Chief Marketing Officer",
+        "department": "Marketing",
+        "image": "https://mockmind-api.uifaces.co/content/human/102.jpg"
+      },
+      "status": "QA",
+      "priority": "high",
+      "progress": 85,
+      "tags": [
+        "marketing",
+        "content"
+      ],
+      "comments": [
+        {
+          "author": "Clementine Bauch",
+          "text": "Script reviewed by product team. Minor edits pending.",
+          "timestamp": "2026-03-25T11:00:00Z"
+        }
+      ],
+      "dueDateDate": "01-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-009",
+      "subject": "Database Schema Migration \u2014 v3 to v4",
+      "description": "Execute the planned database schema migration from v3 to v4. Includes adding new indexes, renaming legacy columns, and running backfill scripts. Zero downtime required.",
+      "arrivalTime": "2026-03-12T08:00:00Z",
+      "dueDate": "2026-04-15T06:00:00Z",
+      "requiredHours": 20,
+      "assignedTo": {
+        "id": 11,
+        "name": "James Wilson",
+        "employeeId": "EMP0011",
+        "designation": "Director of Engineering",
+        "department": "Engineering",
+        "image": "https://mockmind-api.uifaces.co/content/human/11.jpg"
+      },
+      "status": "active",
+      "priority": "critical",
+      "progress": 5,
+      "tags": [
+        "backend",
+        "database",
+        "DevOps"
+      ],
+      "comments": [],
+      "dueDateDate": "15-Apr-2026",
+      "dueDateTime": "06:00 AM"
+    },
+    {
+      "id": "TASK-010",
+      "subject": "Vendor Contract Renewal \u2014 Office Supplies",
+      "description": "Review and renew the annual contract with StaticSpark Ltd for office supply procurement. Negotiate for a 5% discount given the increased order volume from last year.",
+      "arrivalTime": "2026-03-12T10:30:00Z",
+      "dueDate": "2026-03-30T17:00:00Z",
+      "requiredHours": 3,
+      "assignedTo": {
+        "id": 16,
+        "name": "Olivia Garcia",
+        "employeeId": "EMP0016",
+        "designation": "Director of Operations",
+        "department": "Operations",
+        "image": "https://mockmind-api.uifaces.co/content/human/109.jpg"
+      },
+      "status": "delivered",
+      "priority": "low",
+      "progress": 100,
+      "tags": [
+        "admin",
+        "procurement"
+      ],
+      "comments": [
+        {
+          "author": "Olivia Garcia",
+          "text": "Contract signed. 7% discount secured.",
+          "timestamp": "2026-03-27T15:30:00Z"
+        }
+      ],
+      "dueDateDate": "30-Mar-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-011",
+      "subject": "Mobile App Push Notification System",
+      "description": "Design and implement a push notification system for the mobile app. Support segmented audience targeting, scheduled sends, and delivery analytics.",
+      "arrivalTime": "2026-03-13T09:00:00Z",
+      "dueDate": "2026-04-25T17:00:00Z",
+      "requiredHours": 35,
+      "assignedTo": {
+        "id": 7,
+        "name": "Kurtis Weissnat",
+        "employeeId": "EMP0007",
+        "designation": "VP of Product",
+        "department": "Product",
+        "image": "https://mockmind-api.uifaces.co/content/human/7.jpg"
+      },
+      "status": "active",
+      "priority": "high",
+      "progress": 0,
+      "tags": [
+        "mobile",
+        "frontend",
+        "backend"
+      ],
+      "comments": [],
+      "dueDateDate": "25-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-012",
+      "subject": "Annual Performance Review Templates",
+      "description": "Update the annual performance review form templates for all departments. Incorporate the new 360-degree feedback format approved by the HR director in February.",
+      "arrivalTime": "2026-03-14T10:00:00Z",
+      "dueDate": "2026-04-02T17:00:00Z",
+      "requiredHours": 7,
+      "assignedTo": {
+        "id": 14,
+        "name": "Emma Brown",
+        "employeeId": "EMP0014",
+        "designation": "Director of HR",
+        "department": "HR",
+        "image": "https://mockmind-api.uifaces.co/content/human/108.jpg"
+      },
+      "status": "active",
+      "priority": "medium",
+      "progress": 20,
+      "tags": [
+        "HR",
+        "admin"
+      ],
+      "comments": [],
+      "dueDateDate": "02-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-013",
+      "subject": "SEO Audit and Optimization Report",
+      "description": "Conduct a full technical and content SEO audit of the company website. Deliver a prioritized action plan targeting improvements in Core Web Vitals, meta tags, and backlink profile.",
+      "arrivalTime": "2026-03-14T11:00:00Z",
+      "dueDate": "2026-04-12T17:00:00Z",
+      "requiredHours": 18,
+      "assignedTo": {
+        "id": 22,
+        "name": "Mia Harris",
+        "employeeId": "EMP0022",
+        "designation": "Senior Marketing Manager",
+        "department": "Marketing",
+        "image": "https://mockmind-api.uifaces.co/content/human/112.jpg"
+      },
+      "status": "under production",
+      "priority": "medium",
+      "progress": 40,
+      "tags": [
+        "marketing",
+        "SEO"
+      ],
+      "comments": [],
+      "dueDateDate": "12-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-014",
+      "subject": "Internal Knowledge Base Setup",
+      "description": "Set up a company-wide internal knowledge base using Notion. Migrate existing SOPs and documentation from Google Drive. Establish content ownership guidelines.",
+      "arrivalTime": "2026-03-15T09:00:00Z",
+      "dueDate": "2026-05-01T17:00:00Z",
+      "requiredHours": 30,
+      "assignedTo": {
+        "id": 19,
+        "name": "James Thomas",
+        "employeeId": "EMP0019",
+        "designation": "Director of Legal",
+        "department": "Legal",
+        "image": "https://mockmind-api.uifaces.co/content/human/19.jpg"
+      },
+      "status": "active",
+      "priority": "medium",
+      "progress": 15,
+      "tags": [
+        "admin",
+        "documentation",
+        "operations"
+      ],
+      "comments": [],
+      "dueDateDate": "01-May-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-015",
+      "subject": "User Authentication Refactor \u2014 JWT to OAuth2",
+      "description": "Refactor the existing JWT-based authentication system to OAuth2 with support for Google and Microsoft SSO. Update all related API endpoints and session handling logic.",
+      "arrivalTime": "2026-03-16T08:00:00Z",
+      "dueDate": "2026-04-18T17:00:00Z",
+      "requiredHours": 24,
+      "assignedTo": {
+        "id": 21,
+        "name": "Benjamin White",
+        "employeeId": "EMP0021",
+        "designation": "Senior Engineering Manager",
+        "department": "Engineering",
+        "image": "https://mockmind-api.uifaces.co/content/human/21.jpg"
+      },
+      "status": "under production",
+      "priority": "critical",
+      "progress": 60,
+      "tags": [
+        "backend",
+        "security"
+      ],
+      "comments": [
+        {
+          "author": "Benjamin White",
+          "text": "Google SSO done. Microsoft in progress.",
+          "timestamp": "2026-03-24T17:00:00Z"
+        }
+      ],
+      "dueDateDate": "18-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-016",
+      "subject": "Quarterly Newsletter \u2014 Internal",
+      "description": "Write and design the Q1 internal company newsletter. Include highlights from each department, upcoming events, and a note from the CEO. Distribute via email by March 31.",
+      "arrivalTime": "2026-03-17T09:00:00Z",
+      "dueDate": "2026-03-31T12:00:00Z",
+      "requiredHours": 8,
+      "assignedTo": {
+        "id": 18,
+        "name": "Ava Anderson",
+        "employeeId": "EMP0018",
+        "designation": "Director of Product",
+        "department": "Product",
+        "image": "https://mockmind-api.uifaces.co/content/human/110.jpg"
+      },
+      "status": "QA",
+      "priority": "medium",
+      "progress": 95,
+      "tags": [
+        "marketing",
+        "content",
+        "HR"
+      ],
+      "comments": [
+        {
+          "author": "Ava Anderson",
+          "text": "Sent to CEO for final approval.",
+          "timestamp": "2026-03-27T10:00:00Z"
+        }
+      ],
+      "dueDateDate": "31-Mar-2026",
+      "dueDateTime": "12:00 PM"
+    },
+    {
+      "id": "TASK-017",
+      "subject": "Load Testing \u2014 Checkout Flow",
+      "description": "Perform load testing on the checkout flow using k6. Simulate 5,000 concurrent users and identify bottlenecks. Deliver a report with recommendations before the April launch.",
+      "arrivalTime": "2026-03-17T11:00:00Z",
+      "dueDate": "2026-04-08T17:00:00Z",
+      "requiredHours": 14,
+      "assignedTo": {
+        "id": 26,
+        "name": "Amelia Martinez",
+        "employeeId": "EMP0026",
+        "designation": "Engineering Manager",
+        "department": "Engineering",
+        "image": "https://mockmind-api.uifaces.co/content/human/114.jpg"
+      },
+      "status": "active",
+      "priority": "high",
+      "progress": 0,
+      "tags": [
+        "QA",
+        "backend",
+        "performance"
+      ],
+      "comments": [],
+      "dueDateDate": "08-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-018",
+      "subject": "Office Seating Plan Restructure",
+      "description": "Redesign the office seating arrangement following the addition of 8 new hires in Q2. Coordinate with facilities to ensure compliance with fire exit and accessibility regulations.",
+      "arrivalTime": "2026-03-18T09:00:00Z",
+      "dueDate": "2026-04-03T17:00:00Z",
+      "requiredHours": 4,
+      "assignedTo": {
+        "id": 20,
+        "name": "Isabella Jackson",
+        "employeeId": "EMP0020",
+        "designation": "Director of Customer Support",
+        "department": "Customer Support",
+        "image": "https://mockmind-api.uifaces.co/content/human/111.jpg"
+      },
+      "status": "canceled",
+      "priority": "low",
+      "progress": 0,
+      "tags": [
+        "admin",
+        "facilities"
+      ],
+      "comments": [
+        {
+          "author": "Isabella Jackson",
+          "text": "Canceled \u2014 remote-first policy extended through Q2.",
+          "timestamp": "2026-03-22T09:00:00Z"
+        }
+      ],
+      "dueDateDate": "03-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-019",
+      "subject": "Component Library Documentation",
+      "description": "Write comprehensive documentation for the internal React component library. Cover props, usage examples, accessibility notes, and changelog for the v2.0 release.",
+      "arrivalTime": "2026-03-18T10:00:00Z",
+      "dueDate": "2026-04-22T17:00:00Z",
+      "requiredHours": 20,
+      "assignedTo": {
+        "id": 17,
+        "name": "William Rodriguez",
+        "employeeId": "EMP0017",
+        "designation": "Director of Design",
+        "department": "Design",
+        "image": "https://mockmind-api.uifaces.co/content/human/17.jpg"
+      },
+      "status": "active",
+      "priority": "medium",
+      "progress": 5,
+      "tags": [
+        "frontend",
+        "documentation"
+      ],
+      "comments": [],
+      "dueDateDate": "22-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-020",
+      "subject": "GDPR Compliance Review",
+      "description": "Conduct a GDPR compliance audit covering data collection forms, cookie consent banners, privacy policy, and data retention policies. Engage legal counsel if gaps are identified.",
+      "arrivalTime": "2026-03-19T09:00:00Z",
+      "dueDate": "2026-04-30T17:00:00Z",
+      "requiredHours": 22,
+      "assignedTo": {
+        "id": 1,
+        "name": "Leanne Graham",
+        "employeeId": "EMP0001",
+        "designation": "Chief Executive Officer",
+        "department": "Executive",
+        "image": "https://mockmind-api.uifaces.co/content/human/101.jpg"
+      },
+      "status": "active",
+      "priority": "critical",
+      "progress": 10,
+      "tags": [
+        "legal",
+        "compliance",
+        "security"
+      ],
+      "comments": [],
+      "dueDateDate": "30-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-021",
+      "subject": "Competitor Pricing Analysis",
+      "description": "Research and document pricing models of the top 5 competitors. Present a comparison matrix and provide recommendations for adjusting our tiered pricing before the Q2 sales push.",
+      "arrivalTime": "2026-03-20T09:00:00Z",
+      "dueDate": "2026-04-07T17:00:00Z",
+      "requiredHours": 10,
+      "assignedTo": {
+        "id": 8,
+        "name": "Nicholas Runolfsdottir",
+        "employeeId": "EMP0008",
+        "designation": "VP of Sales",
+        "department": "Sales",
+        "image": "https://mockmind-api.uifaces.co/content/human/8.jpg"
+      },
+      "status": "under production",
+      "priority": "high",
+      "progress": 50,
+      "tags": [
+        "research",
+        "sales",
+        "strategy"
+      ],
+      "comments": [],
+      "dueDateDate": "07-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-022",
+      "subject": "CI/CD Pipeline Setup for Mobile App",
+      "description": "Configure a CI/CD pipeline using GitHub Actions for the React Native mobile app. Automate builds, tests, and deployments to TestFlight (iOS) and Play Store (Android) internal track.",
+      "arrivalTime": "2026-03-21T08:00:00Z",
+      "dueDate": "2026-04-14T17:00:00Z",
+      "requiredHours": 18,
+      "assignedTo": {
+        "id": 13,
+        "name": "Liam Johnson",
+        "employeeId": "EMP0013",
+        "designation": "Director of Sales",
+        "department": "Sales",
+        "image": "https://mockmind-api.uifaces.co/content/human/13.jpg"
+      },
+      "status": "active",
+      "priority": "high",
+      "progress": 20,
+      "tags": [
+        "DevOps",
+        "mobile"
+      ],
+      "comments": [],
+      "dueDateDate": "14-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-023",
+      "subject": "Customer Satisfaction Survey \u2014 Q1",
+      "description": "Design, distribute, and analyze the Q1 customer satisfaction survey (CSAT). Target a minimum of 200 responses. Summarize key themes and present findings to the product team.",
+      "arrivalTime": "2026-03-22T09:00:00Z",
+      "dueDate": "2026-04-15T17:00:00Z",
+      "requiredHours": 12,
+      "assignedTo": {
+        "id": 15,
+        "name": "Noah Davis",
+        "employeeId": "EMP0015",
+        "designation": "Director of Finance",
+        "department": "Finance",
+        "image": "https://mockmind-api.uifaces.co/content/human/15.jpg"
+      },
+      "status": "active",
+      "priority": "medium",
+      "progress": 5,
+      "tags": [
+        "research",
+        "customer success"
+      ],
+      "comments": [],
+      "dueDateDate": "15-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-024",
+      "subject": "Dark Mode Implementation \u2014 Web App",
+      "description": "Implement a system-aware dark mode for the web application. Use CSS custom properties for theming. Ensure all components in the design system are covered and tested across browsers.",
+      "arrivalTime": "2026-03-24T09:00:00Z",
+      "dueDate": "2026-04-28T17:00:00Z",
+      "requiredHours": 25,
+      "assignedTo": {
+        "id": 25,
+        "name": "Lucas Garcia",
+        "employeeId": "EMP0025",
+        "designation": "Senior Finance Manager",
+        "department": "Finance",
+        "image": "https://mockmind-api.uifaces.co/content/human/25.jpg"
+      },
+      "status": "active",
+      "priority": "medium",
+      "progress": 0,
+      "tags": [
+        "frontend",
+        "design"
+      ],
+      "comments": [],
+      "dueDateDate": "28-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    },
+    {
+      "id": "TASK-025",
+      "subject": "End-of-Quarter Sales Report",
+      "description": "Compile the Q1 sales report covering revenue by region, top-performing products, churn rate, and MRR growth. To be presented to the board during the April 5th strategy meeting.",
+      "arrivalTime": "2026-03-25T09:00:00Z",
+      "dueDate": "2026-04-04T17:00:00Z",
+      "requiredHours": 9,
+      "assignedTo": {
+        "id": 24,
+        "name": "Charlotte Thompson",
+        "employeeId": "EMP0024",
+        "designation": "Senior HR Manager",
+        "department": "HR",
+        "image": "https://mockmind-api.uifaces.co/content/human/113.jpg"
+      },
+      "status": "active",
+      "priority": "critical",
+      "progress": 0,
+      "tags": [
+        "finance",
+        "reporting",
+        "sales"
+      ],
+      "comments": [],
+      "dueDateDate": "04-Apr-2026",
+      "dueDateTime": "05:00 PM"
+    }
+  ]
+}

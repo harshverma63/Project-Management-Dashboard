@@ -1,0 +1,555 @@
+ul.taskMainContainer.EMP.card-memo.EMPcard-memo {
+    padding: 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-card);
+    overflow: scroll;
+    scrollbar-color: #1b2e55 #152b57;
+    scrollbar-width: thin;
+    cursor: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+ul.taskMainContainer.EMP.card-memo.EMPcard-memo.allH {
+    height: 65vh;
+}
+
+ul.taskMainContainer.EMP.card-memo.EMPcard-memo.allS {
+    height: auto;
+}
+
+.searchContainer {
+    width: 30%;
+}
+
+.Filters .searchContainer input {
+    text-align: center;
+    width: 100%;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: 1px solid var(--glass-border);
+    outline: none;
+    background: linear-gradient(155deg, #111827 0%, #0d1526 100%);
+    color: #fff;
+}
+.noTaskFound{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+li.taskItemContainer {
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.3s ease;
+    animation: cardReveal 0.6s var(--ease) forwards;
+    background: linear-gradient(155deg, #111827 0%, #1b2e55 100%);
+    cursor: pointer;
+    height: fit-content;
+}
+
+li.taskItemContainer:hover {
+    box-shadow: 5px 5px 5px 1px #212734;
+}
+
+h2.taskSubject {
+    font-size: 16px;
+}
+
+.taskItemTop {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.taskItemBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+p.taskDescription {
+    font-size: 14px;
+}
+
+.assignedInfo {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.dueDate {
+    font-size: 12px;
+}
+
+.assignedIMG {
+    width: 30px;
+    height: 30px;
+}
+
+.assignedIMG img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+/* ✅ FIX — taskPopUp was position:absolute which means it only covers
+   the nearest positioned ancestor, not the full viewport. Changed to
+   position:fixed so the popup always covers the whole screen regardless
+   of scroll position or parent positioning context. */
+section.taskPopUp {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.taskPopUpOverlay {
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #192336;
+    z-index: 200;
+    padding: 40px;
+    border-radius: var(--radius-card);
+}
+
+.popUpTop {
+    background: linear-gradient(155deg, #111827 0%, #0d1526 100%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.popUpInfo {
+    background: linear-gradient(155deg, #111827 0%, #0d1526 100%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.popUpRight {
+    width: 70%;
+    text-align: left;
+}
+
+.popUpLeft {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.popUpLeft p {
+    font-size: 13px;
+    width: 100%;
+    text-align: left;
+}
+
+/* .popUpOwnerInfos p{
+  font-size: 20px;
+} */
+.commentContainer {
+    padding: 20px;
+    background: #192337;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.commentContainer h3 {
+    font-size: 16px;
+}
+
+.commentContainer p {
+    font-size: 14px;
+}
+
+.commentBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 10px;
+}
+
+p.commentDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+span.commentAuthorIMG {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+span.commentAuthorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+span.commentAuthorIMG img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.popUpOwner {
+    padding: 20px;
+    display: block;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 2px 8px 0px #19233880;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-card);
+    max-height: 360px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.comentInfo {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.ownerIMG {
+    display: flex;
+    justify-content: center;
+}
+
+.popUpOwner img {
+    width: 100%;
+}
+
+.popUpOwner h3 {
+    font-size: 15px;
+}
+
+.popUpOwner p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.popUpOwner li {
+    font-size: 13px;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.userList {
+    display: block;
+    width: 100%;
+    max-height: 100px;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 0 0px 20px;
+}
+
+.userList li {
+    width: 55%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+/* ── FILTERS ─────────────────────────────────────────────── */
+
+.Filters {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.filterItem.status,
+.filterItem.priority,
+.filterItem.myTask {
+    text-align: center;
+    width: auto;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 8px 20px;
+    border: 1px solid var(--glass-border);
+    outline: none;
+    background: linear-gradient(155deg, #111827 0%, #0d1526 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filterItem.status span,
+.filterItem.priority span {
+    margin-right: 10px;
+}
+
+.filterItem .none {
+    width: 0;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+}
+
+.filterItem .status,
+.filterItem .priority {
+    opacity: 1;
+    text-align: center;
+    width: auto;
+    border-radius: 14px;
+    font-size: 12px;
+    padding: 5px 20px;
+    border: 1px solid var(--glass-border);
+    outline: none;
+    background: linear-gradient(155deg, #111827 0%, #0d1526 100%);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.ownerSearch input {
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    background: linear-gradient(155deg, #111827 0%, #0d1526 100%);
+    border-radius: 16px;
+    outline: none;
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+.popUpLeft .popUpOwnerInfos {
+    display: flex!important;
+    flex-direction: column!important;
+    gap: 10px!important;
+    margin-bottom: 15px;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+
+/* Tablet (≤900px) */
+@media (max-width: 900px) {
+    .userList li {
+        width: 70%;
+    }
+    .searchContainer {
+        width: 50%;
+    }
+
+    .filter {
+        justify-content: flex-start;
+        /* width: 50%; */
+    }
+
+    .popUpRight {
+        width: 100%;
+    }
+
+    .popUpLeft {
+        width: 100% !important;
+        margin-top: 20px !important;
+        justify-content: space-between !important;
+    }
+    .popUpOwner {
+        width: 40%!important;
+        margin-top: 0!important;
+    }    
+
+    .taskPopUpOverlay {
+        padding: 24px;
+    }
+}
+
+/* Mobile (≤580px) */
+@media (max-width: 580px) {
+    .popUpLeft .popUpOwnerInfos {
+        display: flex!important;
+        flex-direction: column!important;
+        gap: 10px!important;
+    }
+    
+    .topHeader.task {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .topHeader.task .mainLgo.mainLgo {
+        width: auto;
+        text-align: left !important;
+    }
+    .topHeader, .EMP.headerRight {
+        gap: 12px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+    }
+    .popUpOwner {
+        width: 100% !important;
+        margin-top: 0 !important;
+    }
+    .topHeader.task .EMP.headerRight {
+        align-items: center !important;
+        gap: 10px !important;
+        display: flex !important;
+        justify-content: flex-end!important;
+        width: auto;
+    }
+
+    .Filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .searchContainer {
+        width: 100%;
+    }
+
+    .filter {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    ul.taskMainContainer.EMP.card-memo.EMPcard-memo {
+        padding: 15px;
+        height: auto !important;
+    }
+
+    li.taskItemContainer {
+        padding: 15px;
+    }
+
+    .taskItemTop {
+        gap: 10px;
+        text-align: left;
+    }
+
+    .taskItemBottom {
+        text-align: left;
+        gap: 10px;
+    }
+
+    section.taskPopUp {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .taskPopUpOverlay {
+        width: 100%;
+        max-height: none;
+        height: auto;
+        padding: 16px;
+    }
+
+    .popUpRight {
+        width: 100%;
+        text-align: left;
+    }
+    .sideMenuContainer {
+        width: 100%!important;
+        background: rgb(14 22 39 / 78%);
+    }
+
+    .popUpLeft {
+        width: 100%;
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+    .popUpTop {
+        justify-content: space-between;
+    }
+    .popUpLeft p {
+        font-size: 14px;
+    }
+}
+
+/* Small mobile (≤380px) */
+@media (max-width: 380px) {
+
+    .filterItem.status,
+    .filterItem.priority,
+    .filterItem.myTask {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+
+    h2.taskSubject {
+        font-size: 14px;
+        width: 75%;
+    }
+}

@@ -1,74 +1,72 @@
-import { EmpHeader } from "./EmpHeader";
-import { UserCard } from "./userCard";
-import { UserTeamPopUp } from "./userTeamPopUp";
-// import { getLocalStorage } from "./UsersLocalStorage";
+import {EmpHeader} from './EmpHeader'
 
-export const EmployeeDash = ({ themeSwitch, handleSwitch, users, handleTeamPopUp, isPopUpOpen, handlePopUpClose, popUpData, loggedInUser, onLogOut }) => {
-
-    if (!loggedInUser) return null;
-
-    const mapsUrl = `https://www.google.com/maps?q=${loggedInUser.address.geo.lat},${loggedInUser.address.geo.lng}`;
-
-    // console.log(loggedInUser);
+// export const LoggedUser = ({ themeSwitch, handleSwitch, users, handleTeamPopUp, isPopUpOpen, handlePopUpClose, popUpData, LoggedEmp, onLogOut }) => {
+export const LoggedUser = ({ LoggedEmp,users,onLogOut,setTaskMangement}) => {
+    
+    // const mapsUrl = `https://www.google.com/maps?q=${LoggedEmp.address.geo.lat},${LoggedEmp.address.geo.lng}`;
 
 
     return (
-        <section className={!themeSwitch ? "bodyDarkTheme" : "bodyLightTheme"}>
+        // <section className={!themeSwitch ? "bodyDarkTheme" : "bodyLightTheme"}>
+        <section className="bodyDarkTheme">
 
             <div className="EMP container">
 
-                <EmpHeader onLogOut={onLogOut} loggedInUser={loggedInUser} handleSwitch={handleSwitch} themeSwitch={themeSwitch} users={users}/>
+                {/* <EmpHeader onLogOut={onLogOut} LoggedEmp={LoggedEmp} handleSwitch={handleSwitch} themeSwitch={themeSwitch} users={users}/> */}
+                
+                <EmpHeader LoggedEmp={LoggedEmp} users={users} onLogOut={onLogOut} setTaskMangement={setTaskMangement}/>
 
 
                 {/* Employee Cards */}
-                <ul className="EMP card-memo EMPcard-memo">
+                {/* <ul className="EMP card-memo EMPcard-memo"> */}
+                <ul className="">
 
-                    <li key={loggedInUser.id} className="EMP pokemon-card" >
+                    <li key={LoggedEmp.id} className="EMP pokemon-card" >
 
                         <div className="EMP card-avatar-zone">
                             <figure>
-                                <img src={loggedInUser.image} alt={loggedInUser.name} />
+                                <img src={LoggedEmp.image} alt={LoggedEmp.name} />
                             </figure>
                         </div>
 
 
                         <div className="EMP card-body card-memo">
-                            <h2 className="EMP userName">{loggedInUser.name}</h2>
+                            <h2 className="EMP userName">{LoggedEmp.name}</h2>
 
 
                             <div className="EMP EMPinfo-list ">
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">✉</span>
-                                    <a href={`mailto:${loggedInUser.employeeId}`}>{loggedInUser.employeeId}</a>
+                                    <a href={`mailto:${LoggedEmp.employeeId}`}>{LoggedEmp.employeeId}</a>
                                 </div>
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">✉</span>
-                                    <a href={`mailto:${loggedInUser.email}`}>{loggedInUser.email}</a>
+                                    <a href={`mailto:${LoggedEmp.email}`}>{LoggedEmp.email}</a>
                                 </div>
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">☏</span>
-                                    <a href={`tel:${loggedInUser.phone}`}>{loggedInUser.phone}</a>
+                                    <a href={`tel:${LoggedEmp.phone}`}>{LoggedEmp.phone}</a>
                                 </div>
 
 
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">☏</span>
                                     <p className="EMP salary-block">
-                                        Designation: {loggedInUser.designation}
+                                        Designation: {LoggedEmp.designation}
                                     </p>
                                 </div>
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">☏</span>
                                     <p className="EMP salary-block">
-                                        Department: {loggedInUser.department}
+                                        Department: {LoggedEmp.department}
                                     </p>
                                 </div>
 
-                                {loggedInUser.isManager && (
+                                {LoggedEmp.isManager && (
                                     <div className="EMP info-row">
                                         <span className="EMP info-icon">☏</span>
                                         <p className="EMP salary-block">
-                                            {`Team Size: ${loggedInUser.teamSize}`}
+                                            {`Team Size: ${LoggedEmp.teamSize}`}
                                         </p>
                                     </div>
                                 )}
@@ -77,40 +75,40 @@ export const EmployeeDash = ({ themeSwitch, handleSwitch, users, handleTeamPopUp
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">☏</span>
                                     <p className="EMP salary-block">
-                                        Salary: ${loggedInUser.salary} PM
+                                        Salary: ${LoggedEmp.salary} PM
                                     </p>
                                 </div>
 
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">⊕</span>
                                     <p>
-                                        Employment Type: {loggedInUser.employmentType}
+                                        Employment Type: {LoggedEmp.employmentType}
                                     </p>
                                 </div>
 
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">⊕</span>
                                     <p>
-                                    Joining Date: {loggedInUser.joinDate}
+                                    Joining Date: {LoggedEmp.joinDate}
                                     </p>
                                 </div>
 
-                                {loggedInUser.isManager && (
+                                {/* {LoggedEmp.isManager && (
                             <div className="EMP info-row">
                                 <span className="EMP info-icon info-icon-temMember">⊕ </span>
                                 <p>Team:</p>
-                                <button className='maps-link' onClick={() => handleTeamPopUp(loggedInUser.teamMembers)}>Click Here</button>
+                                <button className='maps-link' onClick={() => handleTeamPopUp(LoggedEmp.teamMembers)}>Click Here</button>
                             </div>
-                        )}
+                        )} */}
 
                                 <div className="EMP info-row">
                                     <span className="EMP info-icon">⊕</span>
                                     <a
-                                        href={`https://${loggedInUser.website}`}
+                                        href={`https://${LoggedEmp.website}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        {loggedInUser.website}
+                                        {LoggedEmp.website}
                                     </a>
                                 </div>
 
@@ -123,11 +121,11 @@ export const EmployeeDash = ({ themeSwitch, handleSwitch, users, handleTeamPopUp
 
                             <div className="EMP footerAddress">
                             <p className="EMP address-block">
-                                {loggedInUser.address.suite}, {loggedInUser.address.street},&nbsp;
-                                {loggedInUser.address.city} — {loggedInUser.address.zipcode}
+                                {LoggedEmp.address.suite}, {LoggedEmp.address.street},&nbsp;
+                                {LoggedEmp.address.city} — {LoggedEmp.address.zipcode}
                             </p>
 
-                            <a
+                            {/* <a
                                 href={mapsUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -135,7 +133,7 @@ export const EmployeeDash = ({ themeSwitch, handleSwitch, users, handleTeamPopUp
                             >
                                 <span>View on Maps</span>
                                 <span className="EMP maps-link-arrow">→</span>
-                            </a>
+                            </a> */}
                             </div>
                         </div>
                     </li>
@@ -143,7 +141,7 @@ export const EmployeeDash = ({ themeSwitch, handleSwitch, users, handleTeamPopUp
 
 
                 {/* POP Up */}
-                <UserTeamPopUp isPopUpOpen={isPopUpOpen} handlePopUpClose={handlePopUpClose} popUpData={popUpData} />
+                {/* <UserTeamPopUp isPopUpOpen={isPopUpOpen} handlePopUpClose={handlePopUpClose} popUpData={popUpData} /> */}
 
             </div>
 
