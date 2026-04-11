@@ -18,7 +18,7 @@ A role-based **Project & Task Management Dashboard** built with React, demonstra
 
 > **NOTE:**
 > 1. For more employee logins, just increment the last digit(s) of the Employee ID — the password is `admin` for all employees.
-> 2. You can access employees from `EMP0001` to `EMP0100` using the same password.
+> 2. You can access employees from `EMP0001` to `EMP0500` using the same password.
 
 ---
 
