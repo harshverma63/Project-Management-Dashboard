@@ -22,8 +22,9 @@ export const TaskManager = ({ LoggedEmp, users, onLogOut }) => {
     const [showOnlyMyTasks, setShowOnlyMyTasks] = useState(false)
 
 
-    const TaskApi = "https://raw.githubusercontent.com/harshverma63/APIs/refs/heads/main/Tasks/Tasks2.json"
-
+    // const TaskApi = "https://raw.githubusercontent.com/harshverma63/APIs/refs/heads/main/Tasks/Tasks2.json"
+    const TaskApi = "https://raw.githubusercontent.com/harshverma63/APIs/refs/heads/main/Tasks/Tasks1000%2B/Tasks1000.json"
+    
     const taskFetch = async() =>{
         try {
             const res = await fetch(TaskApi)
