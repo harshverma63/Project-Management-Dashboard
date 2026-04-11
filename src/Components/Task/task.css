@@ -6,7 +6,7 @@ ul.taskMainContainer.EMP.card-memo.EMPcard-memo {
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-card);
     overflow: scroll;
-    scrollbar-color: #1b2e55 #152b57;
+    scrollbar-color: #1b2e55 #152b5700;
     scrollbar-width: thin;
     cursor: auto;
     margin-top: 40px;
@@ -208,6 +208,9 @@ section.taskPopUp {
     font-size: 16px;
 }
 
+.commentContainer p.commentDescription {
+    font-size: 16px;
+}
 .commentContainer p {
     font-size: 14px;
 }
@@ -218,6 +221,19 @@ section.taskPopUp {
     flex-wrap: wrap;
     align-content: space-between;
     gap: 10px;
+}
+.commentBox {
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 10px;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-right: 15px;
+    scrollbar-color: #0c1526 #978b7700;
+    scrollbar-width: thin;
 }
 
 p.commentDetails {
@@ -272,6 +288,10 @@ span.commentAuthorIMG img {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 10px;
+    background: #0d1526;
+    padding: 13px;
+    border-radius: 8px;
 }
 
 .mb15 {
@@ -422,6 +442,12 @@ span.commentAuthorIMG img {
         width: 100%;
     }
 
+    .commentBox {
+        max-height: 250px;
+    }
+    .taskItemBottom {
+        gap: 15px;
+    }
     .popUpLeft {
         width: 100% !important;
         margin-top: 20px !important;
@@ -439,6 +465,9 @@ span.commentAuthorIMG img {
 
 /* Mobile (≤580px) */
 @media (max-width: 580px) {
+    p.commentDetails {
+        gap: 10px;
+    }
     .popUpLeft .popUpOwnerInfos {
         display: flex!important;
         flex-direction: column!important;
