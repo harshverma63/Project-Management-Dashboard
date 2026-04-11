@@ -444,6 +444,7 @@ span.commentAuthorIMG img {
 
     .commentBox {
         max-height: 250px;
+        padding-right: 10px;
     }
     .taskItemBottom {
         gap: 15px;
